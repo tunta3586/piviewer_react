@@ -1,0 +1,4 @@
+/* nav 오른쪽 화살표 삭제를 위한 */
+.navbar-nav .nav-item .nav-link::after {
+    display: none;
+}

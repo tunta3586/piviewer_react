@@ -4,7 +4,7 @@ import './style/index.css';
 import App from './App';
 import Header from './components/Header'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('channerBar'));
 root.render(
   <React.StrictMode>
     <App />
