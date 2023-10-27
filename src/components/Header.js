@@ -7,7 +7,7 @@ import alarm from '../img/alarm.png';
 
 function Header() {
   return (
-    <Navbar expand="lg" className="p-3 bg-primary bg-opacity-50" style={{ height: '60px' }}>
+    <Navbar className="px-3 py-0 bg-primary bg-opacity-50">
       <Container fluid>
         <Navbar href="#home"><Image src={logo}></Image></Navbar>
         <Navbar.Collapse id="basic-navbar-nav" className='d-flex justify-content-center'>
@@ -15,7 +15,7 @@ function Header() {
             <FormControl type="search" placeholder="Search..." className="mr-2" aria-label="Search" />
           </Form>
         </Navbar.Collapse>
-        <Navbar id="basic-navbar-nav d-flex justify-content-end" className='me-5'>
+        <Navbar id="basic-navbar-nav d-flex justify-content-end">
           <Nav className='d-flex align-items-center'>
             <NavDropdown title={<Image src={alarm} className='bg-danger rounded-circle'></Image>} id="basic-nav-dropdown" align="end">
               <div>
@@ -31,9 +31,7 @@ function Header() {
             <NavDropdown title={<Image src={logo} className='rounded-circle'></Image>} id="basic-nav-dropdown" align="end">
               <NavDropdown.Item href="#action/3.1" >내정보</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                로그 아웃
-              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.4">로그 아웃</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar>
