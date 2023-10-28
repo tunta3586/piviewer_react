@@ -1,6 +1,5 @@
 import React from 'react';
 import { Navbar, Nav, Form, FormControl, Image, Container, NavDropdown } from 'react-bootstrap';
-import '../style/bootstrap.css';
 import '../style/Header.css';
 import logo from '../img/logo.png';
 import alarm from '../img/alarm.png';
