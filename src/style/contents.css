@@ -1,3 +1,15 @@
-.channels{
-    width: 200px;
+#channels{
+    width: 100%;
+    max-width: 220px;
+}
+.form-signin{
+    max-width: 330px;
+}
+.email-signin{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.password-signin{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }

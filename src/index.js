@@ -1,17 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './style/index.css';
-import MainContents from './components/MainContents.js';
-import Header from './components/Header';
+import App from './App';
 
-const headerTag = ReactDOM.createRoot(document.getElementById('header'));
-headerTag.render(
+const root = ReactDOM.createRoot(document.getElementById('piview'));
+root.render(
     <React.StrictMode>
-        <Header />
+        <App/>
     </React.StrictMode>
-);
-
-const contents = ReactDOM.createRoot(document.getElementById('contents'));
-contents.render(
-    <MainContents />
 );

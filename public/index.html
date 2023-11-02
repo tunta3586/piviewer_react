@@ -6,43 +6,7 @@
     <title>React App</title>
   </head>
   <body>
-    <header id="header"></header>
-    <div id="contents" class="d-flex h-100">
-      <span id="channels" style="width: 350px;" class="bg-primary bg-opacity-25">
-        <div class="m-3 p-2 bg-secondary bg-opacity-50">
-          <div class="row pb-2 justify-content-around">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAAHWSURBVFhH7ZZN0oIwDIbLt8KdS5ZwCjcu9BbeAG7BkmPALfBmsvMj0jAxpD+0OsOMPDMZsITmbWxDkueI2jB/+rpZdoGx7AJjEQXe73d1vV5V13V6xAz6FkWhkiR5MxjzmcMKlBlOlmVQep5pmuoRmb7vn8fj8eVrMtccLkSBNIANXIjL2rbVb6wnSiD1q6pKj05A5vBZTBY/JpDTNI31uS/ipw42OCI8nnH5+c5j42Nlhp9WON2fICqDh8NBDcOgf9n5WgZt9ayua31nZzxA+i4AyCCHnkA000nkh4EbP91rEQVKQWMDhbI3rLH8pkCogXDyv9bNUKBjuVwu3h98qcPJ8zy4YTAKhEAwMQbx+eDb2i94P0SkKNAUyIWr/QoRKUaVArnqICxK8uc1da3IhUBTIBd8URRJpC8LgVIguh9NG56+Iy0qtD9ceNJJMBA9LGBSBuhzEz4+HGsdPJ1Or2tZlq8rAi1WdH3zRQudgezAMBjf0PwZBcfBJPje9mXhaWqf4G8+n89vYxQ6ThdF9y81X0RPk8ixeZ3vb7eb9p6g2XWZb2UAjEsxiUR7PB7ac8Llj7ZGHOCf6xGaJQmbyLXCkFUCUUBosBD2jjqWXWAsGxeo1D8tsFfL3zNPUAAAAABJRU5ErkJggg==" class="col">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAAHWSURBVFhH7ZZN0oIwDIbLt8KdS5ZwCjcu9BbeAG7BkmPALfBmsvMj0jAxpD+0OsOMPDMZsITmbWxDkueI2jB/+rpZdoGx7AJjEQXe73d1vV5V13V6xAz6FkWhkiR5MxjzmcMKlBlOlmVQep5pmuoRmb7vn8fj8eVrMtccLkSBNIANXIjL2rbVb6wnSiD1q6pKj05A5vBZTBY/JpDTNI31uS/ipw42OCI8nnH5+c5j42Nlhp9WON2fICqDh8NBDcOgf9n5WgZt9ayua31nZzxA+i4AyCCHnkA000nkh4EbP91rEQVKQWMDhbI3rLH8pkCogXDyv9bNUKBjuVwu3h98qcPJ8zy4YTAKhEAwMQbx+eDb2i94P0SkKNAUyIWr/QoRKUaVArnqICxK8uc1da3IhUBTIBd8URRJpC8LgVIguh9NG56+Iy0qtD9ceNJJMBA9LGBSBuhzEz4+HGsdPJ1Or2tZlq8rAi1WdH3zRQudgezAMBjf0PwZBcfBJPje9mXhaWqf4G8+n89vYxQ6ThdF9y81X0RPk8ixeZ3vb7eb9p6g2XWZb2UAjEsxiUR7PB7ac8Llj7ZGHOCf6xGaJQmbyLXCkFUCUUBosBD2jjqWXWAsGxeo1D8tsFfL3zNPUAAAAABJRU5ErkJggg==" class="col">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAAHWSURBVFhH7ZZN0oIwDIbLt8KdS5ZwCjcu9BbeAG7BkmPALfBmsvMj0jAxpD+0OsOMPDMZsITmbWxDkueI2jB/+rpZdoGx7AJjEQXe73d1vV5V13V6xAz6FkWhkiR5MxjzmcMKlBlOlmVQep5pmuoRmb7vn8fj8eVrMtccLkSBNIANXIjL2rbVb6wnSiD1q6pKj05A5vBZTBY/JpDTNI31uS/ipw42OCI8nnH5+c5j42Nlhp9WON2fICqDh8NBDcOgf9n5WgZt9ayua31nZzxA+i4AyCCHnkA000nkh4EbP91rEQVKQWMDhbI3rLH8pkCogXDyv9bNUKBjuVwu3h98qcPJ8zy4YTAKhEAwMQbx+eDb2i94P0SkKNAUyIWr/QoRKUaVArnqICxK8uc1da3IhUBTIBd8URRJpC8LgVIguh9NG56+Iy0qtD9ceNJJMBA9LGBSBuhzEz4+HGsdPJ1Or2tZlq8rAi1WdH3zRQudgezAMBjf0PwZBcfBJPje9mXhaWqf4G8+n89vYxQ6ThdF9y81X0RPk8ixeZ3vb7eb9p6g2XWZb2UAjEsxiUR7PB7ac8Llj7ZGHOCf6xGaJQmbyLXCkFUCUUBosBD2jjqWXWAsGxeo1D8tsFfL3zNPUAAAAABJRU5ErkJggg==" class="col">
-          </div>
-          <div class="text-center">유콘</div>
-        </div>
-        <div class="m-3 p-2 bg-secondary bg-opacity-50">
-          <div class="row pb-2 justify-content-around">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAAHWSURBVFhH7ZZN0oIwDIbLt8KdS5ZwCjcu9BbeAG7BkmPALfBmsvMj0jAxpD+0OsOMPDMZsITmbWxDkueI2jB/+rpZdoGx7AJjEQXe73d1vV5V13V6xAz6FkWhkiR5MxjzmcMKlBlOlmVQep5pmuoRmb7vn8fj8eVrMtccLkSBNIANXIjL2rbVb6wnSiD1q6pKj05A5vBZTBY/JpDTNI31uS/ipw42OCI8nnH5+c5j42Nlhp9WON2fICqDh8NBDcOgf9n5WgZt9ayua31nZzxA+i4AyCCHnkA000nkh4EbP91rEQVKQWMDhbI3rLH8pkCogXDyv9bNUKBjuVwu3h98qcPJ8zy4YTAKhEAwMQbx+eDb2i94P0SkKNAUyIWr/QoRKUaVArnqICxK8uc1da3IhUBTIBd8URRJpC8LgVIguh9NG56+Iy0qtD9ceNJJMBA9LGBSBuhzEz4+HGsdPJ1Or2tZlq8rAi1WdH3zRQudgezAMBjf0PwZBcfBJPje9mXhaWqf4G8+n89vYxQ6ThdF9y81X0RPk8ixeZ3vb7eb9p6g2XWZb2UAjEsxiUR7PB7ac8Llj7ZGHOCf6xGaJQmbyLXCkFUCUUBosBD2jjqWXWAsGxeo1D8tsFfL3zNPUAAAAABJRU5ErkJggg==" class="col">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAAHWSURBVFhH7ZZN0oIwDIbLt8KdS5ZwCjcu9BbeAG7BkmPALfBmsvMj0jAxpD+0OsOMPDMZsITmbWxDkueI2jB/+rpZdoGx7AJjEQXe73d1vV5V13V6xAz6FkWhkiR5MxjzmcMKlBlOlmVQep5pmuoRmb7vn8fj8eVrMtccLkSBNIANXIjL2rbVb6wnSiD1q6pKj05A5vBZTBY/JpDTNI31uS/ipw42OCI8nnH5+c5j42Nlhp9WON2fICqDh8NBDcOgf9n5WgZt9ayua31nZzxA+i4AyCCHnkA000nkh4EbP91rEQVKQWMDhbI3rLH8pkCogXDyv9bNUKBjuVwu3h98qcPJ8zy4YTAKhEAwMQbx+eDb2i94P0SkKNAUyIWr/QoRKUaVArnqICxK8uc1da3IhUBTIBd8URRJpC8LgVIguh9NG56+Iy0qtD9ceNJJMBA9LGBSBuhzEz4+HGsdPJ1Or2tZlq8rAi1WdH3zRQudgezAMBjf0PwZBcfBJPje9mXhaWqf4G8+n89vYxQ6ThdF9y81X0RPk8ixeZ3vb7eb9p6g2XWZb2UAjEsxiUR7PB7ac8Llj7ZGHOCf6xGaJQmbyLXCkFUCUUBosBD2jjqWXWAsGxeo1D8tsFfL3zNPUAAAAABJRU5ErkJggg==" class="col">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAAHWSURBVFhH7ZZN0oIwDIbLt8KdS5ZwCjcu9BbeAG7BkmPALfBmsvMj0jAxpD+0OsOMPDMZsITmbWxDkueI2jB/+rpZdoGx7AJjEQXe73d1vV5V13V6xAz6FkWhkiR5MxjzmcMKlBlOlmVQep5pmuoRmb7vn8fj8eVrMtccLkSBNIANXIjL2rbVb6wnSiD1q6pKj05A5vBZTBY/JpDTNI31uS/ipw42OCI8nnH5+c5j42Nlhp9WON2fICqDh8NBDcOgf9n5WgZt9ayua31nZzxA+i4AyCCHnkA000nkh4EbP91rEQVKQWMDhbI3rLH8pkCogXDyv9bNUKBjuVwu3h98qcPJ8zy4YTAKhEAwMQbx+eDb2i94P0SkKNAUyIWr/QoRKUaVArnqICxK8uc1da3IhUBTIBd8URRJpC8LgVIguh9NG56+Iy0qtD9ceNJJMBA9LGBSBuhzEz4+HGsdPJ1Or2tZlq8rAi1WdH3zRQudgezAMBjf0PwZBcfBJPje9mXhaWqf4G8+n89vYxQ6ThdF9y81X0RPk8ixeZ3vb7eb9p6g2XWZb2UAjEsxiUR7PB7ac8Llj7ZGHOCf6xGaJQmbyLXCkFUCUUBosBD2jjqWXWAsGxeo1D8tsFfL3zNPUAAAAABJRU5ErkJggg==" class="col">
-          </div>
-          <div class="text-center">유콘</div>
-        </div>
-      </span>
-      <iframe 
-        id="ytplayer" 
-        type="text/html" 
-        height="360"
-        src="https://www.youtube.com/embed/FsVrrNUZ06M?"
-        frameborder="0"
-        allowfullscreen>
-      </iframe>
-      <iframe
-        src="https://www.twitch.tv/embed/ukon60/chat?parent=localhost"
-        width="450"
-        id="twitchChatIframe"
-        theme="black"
-        class="item">
-      </iframe>
-    </div>
-    <footer id="footer"></footer>
+    <div id="piview" class="h-100"></div>
     <script>
       // function resizeIframe() {
       //   const iframe = document.getElementById("twitchChatIframe");
