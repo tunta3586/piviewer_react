@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.sidebar{
+  width: 250px;
+}
+
+.add-follow-button:hover {
+  background-color: #3498db; /* 초기 배경색 */
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  transition: background-color 1s ease; /* 트랜지션 속성 설정 */
+}

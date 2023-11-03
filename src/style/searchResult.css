@@ -1,0 +1,33 @@
+.searchResult{
+    width: 90%;
+    max-height: 100%;
+    /* border-radius: 21px 21px 21px 21px; */
+}
+
+.searchResultElement{
+    background-color: #3498db; /* 초기 배경색 */
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    transition: background-color 1s ease; /* 트랜지션 속성 설정 */
+}
+
+.scrollarea{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.searchResultField{
+    overflow-y: scroll;
+    max-height: 500px;
+}
+
+.searchResultField::-webkit-scrollbar {
+    display: none;
+}
+
+.thumbnailSize{
+    width: 10px;
+    height: auto;
+}

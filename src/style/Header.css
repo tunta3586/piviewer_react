@@ -11,3 +11,8 @@ header{
     max-height: 70px;
     height: 100%;
 }
+
+.site-logo{
+    text-decoration: none;
+    color: black;
+}

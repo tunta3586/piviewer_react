@@ -1,8 +1,6 @@
 import React from 'react';
 import '../style/contents.css';
 
-
-
 function InitForm() {
     return (
         <div className='col p-5'>
