@@ -10,6 +10,8 @@
     text-align: center;
     line-height: 50px;
     transition: background-color 1s ease; /* 트랜지션 속성 설정 */
+    max-height: 500px;
+    height:100%;
 }
 
 .scrollarea{
@@ -28,6 +30,20 @@
 }
 
 .thumbnailSize{
-    width: 10px;
+    width: 100px;
     height: auto;
+}
+
+.channel-des-area{
+    max-height: 500px;
+    height: 100%;
+}
+
+.addfollowbutton{
+    max-width: 100px;
+    width: 100%;
+}
+
+.disable-drag {
+    user-select: none;
 }
