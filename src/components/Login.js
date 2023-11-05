@@ -5,12 +5,13 @@ function SignupForm(){
     const Signup = () => {
         const data = {
             username: document.getElementById('username').value,
-            password: document.getElementById('password').value
-          };
+            password: document.getElementById('password').value,
+            youtubeChannelId: document.getElementById('youtubeChannelId').value,
+        };
         // Spring 서버로 JSON 데이터를 보내는 함수
         async function sendDataToSpringServer() {
         try {
-            const response = await fetch('http://192.168.0.14:8080/signup', {
+            const response = await fetch('http://localhost:8080/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json', // JSON 데이터라는 것을 명시
@@ -36,6 +37,10 @@ function SignupForm(){
             <div className='text-center h3 p-3'>회원 가입</div>
             <EmailForm/>
             <PasswordForm/>
+            <div className="form-floating mt-2">
+                <input type="text" className="form-control" id="youtubeChannelId" placeholder=""></input>
+                <label htmlFor="youtubeChannelid">YoutubeChannelid</label>
+            </div>
             <button onClick={Signup} className="btn btn-primary w-100 py-2 mt-3">Signin</button>
         </div>
     );
