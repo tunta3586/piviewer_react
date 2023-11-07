@@ -1,9 +1,19 @@
 import React, { useState, useEffect  } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate  } from 'react-router-dom';
 import "../style/sideBar.css";
 
 function SideBar() {
     const [followes, setFollowes] = useState([]);
+    const navigate = useNavigate();
+
+    // Link를 클릭하면 URL 경로와 함께 쿼리를 추가하여 다른 페이지로 이동합니다
+    const handleLinkClick = (e, customUrl, videoId) => {
+        e.preventDefault(); // 기본 동작 중지
+
+        const query = '?v=' + videoId;
+        const newPath = '/'+ customUrl + query;
+        navigate(newPath);
+    }
 
     async function getFollowChannels() {
         try {
@@ -47,7 +57,7 @@ function SideBar() {
         {followes.map((item, index) => (
         <div key={index}>
             { item.isLive === "Live" && (
-            <Link className="list-group-item list-group-item-action py-3 lh-sm" aria-current="true">
+            <Link className="list-group-item list-group-item-action py-3 lh-sm" aria-current="true" onClick={(e) => handleLinkClick(e, item.customUrl, item.videoId)}>
             <div className='row'>
                 <div className='sidebar_img'>
                     <img src={item.thumbnailsUrl} alt="" className="col sidebar_img"/>

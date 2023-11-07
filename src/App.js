@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Header from './components/Header';
 import MainContents from './components/MainContents';
 import SearchResults from './components/SearchResults';
+import LiveStream from './components/LiveStream';
 import Login from './components/Login';
 import './style/App.css';
 import SideBar from './components/SideBar';
@@ -75,6 +76,7 @@ function App() {
                         <Routes>
                             <Route path="/search" element={<SearchResults />} />
                             <Route path="/" element={<MainContents isLoggedIn={isLoggedIn} onLogin={handleLogin}/>} />
+                            <Route path="/:customUrl" element={<LiveStream />} />
                             <Route path="/login" element={<Login isLoggedIn={isLoggedIn} onLogin={handleLogin}/>} />
                         </Routes>
                     </div>

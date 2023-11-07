@@ -1,0 +1,21 @@
+.contentsSize{
+    height: 100%;
+}
+
+.contentsSize2{
+    height: 80%;
+    width: 100%;
+}
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+.formheight{
+    max-height: 200px;
+    height: 100%;
+}
