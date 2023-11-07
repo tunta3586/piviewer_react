@@ -1,0 +1,14 @@
+.overflow-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 8em;
+    display: inline-block;
+}
+
+.live-text{
+    background-color: red; /* 배경색을 빨간색으로 설정 */
+    color: white; /* 글자색을 하얀색으로 설정 */
+    border-radius: 10px; /* 둥근 모서리를 10px로 설정 */
+    padding: 5px 10px; /* 내부 여백 설정 */
+}

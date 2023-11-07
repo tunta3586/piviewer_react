@@ -36,7 +36,7 @@ function Header({ isLoggedIn, onLogout }) {
     }
 
     return ( isLoggedIn ? (
-        <Navbar className="px-3 py-0 bg-primary bg-opacity-50 navbar">
+        <Navbar className="px-3 py-0 bg-primary bg-opacity-50 navbar header">
             <Container fluid>
                 <Navbar.Brand>
                     <Link to="/" className='site-logo h2'>PIVeiwer</Link>
@@ -64,7 +64,7 @@ function Header({ isLoggedIn, onLogout }) {
             </Container>
         </Navbar>
         ) : (
-            <Navbar className="px-3 py-0 bg-primary bg-opacity-50 navbar">
+            <Navbar className="px-3 py-0 bg-primary bg-opacity-50 navbar header">
                 <Container fluid>
                     <Navbar.Brand>
                         <Link to="/" className='site-logo h2'>PIVeiwer</Link>

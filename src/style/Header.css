@@ -3,16 +3,14 @@
     display: none;
 }
 
-.navbar{
-    height: 100%;
-}
-
-header{
-    max-height: 70px;
-    height: 100%;
-}
-
 .site-logo{
     text-decoration: none;
     color: black;
+}
+
+.header{
+  position: fixed; /* 헤더를 화면 상단에 고정 */
+  height: 70px;
+  width: 100%; /* 가로폭을 화면 전체로 확장 */
+  z-index: 1; /* 다른 요소 위에 나타나도록 설정 (사이드바 아래) */
 }
