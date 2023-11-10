@@ -64,7 +64,7 @@ function SearchResults() {
     }
 
     return (
-        <div className='h-100 p-5'>
+        <div className='h-100 p-5 w-50'>
             <h1>팔로우 추가</h1>
             <form onSubmit={(event) => {
                 event.preventDefault();

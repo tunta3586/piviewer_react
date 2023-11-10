@@ -2,14 +2,14 @@ import React, { useState, useEffect  } from 'react';
 import { Link, useNavigate  } from 'react-router-dom';
 import "../style/sideBar.css";
 
-function SideBar() {
+function SideBar({setStreramTwitchId}) {
     const [followes, setFollowes] = useState([]);
     const navigate = useNavigate();
 
     // Link를 클릭하면 URL 경로와 함께 쿼리를 추가하여 다른 페이지로 이동합니다
     const handleLinkClick = (e, customUrl, videoId) => {
         e.preventDefault(); // 기본 동작 중지
-
+        getLiveStreamTwitchChannelId(customUrl);
         const query = '?v=' + videoId;
         const newPath = '/'+ customUrl + query;
         navigate(newPath);
@@ -33,6 +33,28 @@ function SideBar() {
                 }
             } catch (error) {
             console.error('오류 발생:', error);
+        }
+    }
+
+    async function getLiveStreamTwitchChannelId(customUrl) {
+        try {
+            const response = await fetch('http://localhost:8080/getLiveStreamTwitchChannelId?custumUrl=' + customUrl, {
+                method: 'GET',
+                headers: {
+                'Content-Type': 'application/json',
+                },
+                credentials: 'include',
+            });
+                if (response.ok) {
+                    const responseData = await response.text();
+                    setStreramTwitchId(responseData);
+                    console.log('Spring 서버 응답 데이터:', responseData);
+                    return responseData;
+                } else {
+                    console.error('Spring 서버 응답 에러:', response.status, response.statusText);
+                }
+            } catch (error) {
+            console.error('오류 발생');
         }
     }
 

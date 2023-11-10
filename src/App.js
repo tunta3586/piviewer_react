@@ -10,6 +10,7 @@ import SideBar from './components/SideBar';
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [streramTwitchId, setStreramTwitchId] = useState("");
 
     const handleLogin = () => {
         setIsLoggedIn(true);
@@ -55,7 +56,7 @@ function App() {
                     <Header isLoggedIn={isLoggedIn} onLogout={handleLogout} />
                 </header>
                 <div className="d-flex h-100">
-                    <div className="d-flex flex-column align-items-stretch flex-shrink-0 bg-body-tertiary sidebar mt-header">
+                    <div className="d-flex flex-column h-100 bg-body-tertiary sidebar mt-header">
                         <div className="border-bottom add-follow-button">
                             {isLoggedIn && 
                             <Link className="list-group-item list-group-item-action py-3 lh-sm text-center" to='/search'>
@@ -66,17 +67,17 @@ function App() {
                         <div className="text-center p-3 border-bottom fs-5 fw-semibold">팔로우 목록</div>
                         <div className="list-group list-group-flush border-bottom scrollarea">
                             {isLoggedIn  ? (
-                                <SideBar />
+                                <SideBar setStreramTwitchId={setStreramTwitchId}/>
                             ) : (
                                 <div className='text-center'>로그인을 해주세요</div>
                             )}
                         </div>
                     </div>
-                    <div id="contents" className='w-100 mt-header'>
+                    <div className='w-100 mt-header contents'>
                         <Routes>
                             <Route path="/search" element={<SearchResults />} />
                             <Route path="/" element={<MainContents isLoggedIn={isLoggedIn} onLogin={handleLogin}/>} />
-                            <Route path="/:customUrl" element={<LiveStream />} />
+                            <Route path="/:customUrl" element={<LiveStream streramTwitchId={streramTwitchId} setStreramTwitchId={setStreramTwitchId}/>} />
                             <Route path="/login" element={<Login isLoggedIn={isLoggedIn} onLogin={handleLogin}/>} />
                         </Routes>
                     </div>

@@ -1,21 +1,7 @@
-.contentsSize{
-    height: 100%;
+.video-area{
+    margin-right: 200px;
 }
 
-.contentsSize2{
-    height: 80%;
-    width: 100%;
-}
-
-.show{
-    display: block;
-}
-
-.hide{
-    display: none;
-}
-
-.formheight{
-    max-height: 200px;
-    height: 100%;
+.search-result{
+    max-height:350px;
 }
