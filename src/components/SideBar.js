@@ -7,11 +7,11 @@ function SideBar({setStreramTwitchId}) {
     const navigate = useNavigate();
 
     // Link를 클릭하면 URL 경로와 함께 쿼리를 추가하여 다른 페이지로 이동합니다
-    const handleLinkClick = (e, customUrl, videoId) => {
+    const handleLinkClick = (e, custom_url, video_id) => {
         e.preventDefault(); // 기본 동작 중지
-        getLiveStreamTwitchChannelId(customUrl);
-        const query = '?v=' + videoId;
-        const newPath = '/'+ customUrl + query;
+        getLiveStreamTwitchChannelId(custom_url);
+        const query = '?v=' + video_id;
+        const newPath = '/'+ custom_url + query;
         navigate(newPath);
     }
 
@@ -36,9 +36,9 @@ function SideBar({setStreramTwitchId}) {
         }
     }
 
-    async function getLiveStreamTwitchChannelId(customUrl) {
+    async function getLiveStreamTwitchChannelId(custom_url) {
         try {
-            const response = await fetch('http://localhost:8080/getLiveStreamTwitchChannelId?custumUrl=' + customUrl, {
+            const response = await fetch('http://localhost:8080/getLiveStreamTwitchChannelId?custumUrl=' + custom_url, {
                 method: 'GET',
                 headers: {
                 'Content-Type': 'application/json',
@@ -78,15 +78,15 @@ function SideBar({setStreramTwitchId}) {
             <h4 className='m-0'>생방송</h4>
         {followes.map((item, index) => (
         <div key={index}>
-            { item.isLive === "Live" && (
-            <Link className="list-group-item list-group-item-action py-3 lh-sm" aria-current="true" onClick={(e) => handleLinkClick(e, item.customUrl, item.videoId)}>
+            { item.is_live === "Live" && (
+            <Link className="list-group-item list-group-item-action py-3 lh-sm" aria-current="true" onClick={(e) => handleLinkClick(e, item.custom_url, item.video_id)}>
             <div className='row'>
                 <div className='sidebar_img'>
-                    <img src={item.thumbnailsUrl} alt="" className="col sidebar_img"/>
+                    <img src={item.thumbnails_url} alt="" className="col sidebar_img"/>
                 </div>
                 <div className='col mx-2'>
                     <div className='overflow-text'><strong >{item.name}</strong></div>
-                    <div><small className='live-text'>{item.isLive}</small></div>
+                    <div><small className='live-text'>{item.is_live}</small></div>
                 </div>
             </div>
             </Link>
@@ -96,15 +96,15 @@ function SideBar({setStreramTwitchId}) {
         <h4 className='m-0'>오프라인</h4>
         {followes.map((item, index) => (
         <div key={index}>
-            { item.isLive === "" && (
+            { item.is_live === "" && (
             <Link className="list-group-item list-group-item-action py-3 lh-sm" aria-current="true">
             <div className='row'>
                 <div className='sidebar_img'>
-                    <img src={item.thumbnailsUrl} alt="" className="col sidebar_img"/>
+                    <img src={item.thumbnails_url} alt="" className="col sidebar_img"/>
                 </div>
                 <div className='col mx-2'>
                     <div className='overflow-text'><strong >{item.name}</strong></div>
-                    <div><small>{item.isLive}</small></div>
+                    <div><small>{item.is_live}</small></div>
                 </div>
             </div>
             </Link>
