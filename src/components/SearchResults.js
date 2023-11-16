@@ -90,10 +90,10 @@ function SearchResults() {
                             {searchResult != null ? (
                                 <Link className="list-group-item py-3 px-2 lh-sm searchResultElement" aria-current="true">
                                     <div className='row'>
-                                        <img src={searchResult.thumbnailsUrl} alt="Thumbnail" className='thumbnailSize'></img>
+                                        <img src={searchResult.thumbnails_url} alt="Thumbnail" className='thumbnailSize'></img>
                                         <div className="w-100 align-items-center col">
                                             <div>
-                                                <strong className="mb-1">{searchResult.customUrl}</strong>
+                                                <strong className="mb-1">{searchResult.custom_url}</strong>
                                             </div>
                                             <div className="d-flex justify-content-center align-items-center channel-des-area">{searchResult.description}</div>
                                         </div>
@@ -128,10 +128,10 @@ function SearchResults() {
                                         {searchResult != null ? (
                                             <Link className="list-group-item py-3 px-2 lh-sm searchResultElement" aria-current="true">
                                                 <div className='row'>
-                                                    <img src={searchResult.thumbnailsUrl} alt="Thumbnail" className='thumbnailSize'></img>
+                                                    <img src={searchResult.thumbnails_url} alt="Thumbnail" className='thumbnailSize'></img>
                                                     <div className="w-100 align-items-center col">
                                                         <div>
-                                                            <strong className="mb-1">{searchResult.customUrl}</strong>
+                                                            <strong className="mb-1">{searchResult.custom_url}</strong>
                                                         </div>
                                                         <div className="d-flex justify-content-center align-items-center channel-des-area">{searchResult.description}</div>
                                                     </div>
