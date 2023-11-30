@@ -1,6 +1,6 @@
 import React, { useState, useEffect  } from 'react';
 import { Link, useNavigate  } from 'react-router-dom';
-import "../style/sideBar.css";
+import "../style/SideBar.css";
 
 function SideBar({setStreramTwitchId}) {
     const [followes, setFollowes] = useState([]);
@@ -62,7 +62,7 @@ function SideBar({setStreramTwitchId}) {
         // 초기 로딩 시 한 번 데이터 가져오기
         getFollowChannels();
 
-        // 5초마다 데이터 업데이트
+        // 3초마다 데이터 업데이트
         const intervalId = setInterval(() => {
             getFollowChannels();
         }, 30000);

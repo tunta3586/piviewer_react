@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style/contents.css';
+import '../style/MainContents.css';
 
 function InitForm() {
     return (
